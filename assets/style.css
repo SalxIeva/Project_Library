@@ -1,0 +1,16 @@
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 20vh;
+}
+
+table {
+    width: 50vh;
+    border: 1px solid black;
+    
+}
