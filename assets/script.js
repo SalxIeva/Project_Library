@@ -1,5 +1,18 @@
 // console.log("Hello World!")
 
+// get all the needed elements by their ids
+const title = document.getElementById('title');
+const author = document.getElementById('author');
+const pages = document.getElementById('pages');
+const read = document.getElementById('read');
+
+const cancelBtn = document.getElementById('cancelBtn');
+const confirmBtn = document.getElementById('confirmBtn');
+const addBookBtn = document.getElementById('addBook');
+
+const output = document.getElementById('table');
+const tableTitle = document.getElementById('table_title');
+
 
 // All of your book objects are going to be stored in an array
 const myLibrary = [];
