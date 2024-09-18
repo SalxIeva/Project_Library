@@ -14,35 +14,62 @@
                     <input type="text" id="title" required />
                 </label>
             </p>
+            <p>
+                <label for="author">
+                    <input type="text" id="author" required>
+                </label>
+            </p>
+            <p>
+                <label for="pages">
+                    <input type="number" id="pages" required>
+                </label>
+            </p>
+            <p>
+                <label for="read">
+                    <select>
+                        <option value="default" id="read">Read</option>
+                        <option id="unread">Unread</option>
+                    </select>
+                </label>
+            </p>
+            <div>
+                <button value="cancel" formmethod="dialog">Cancel</button>
+                <button id="confirmBtn" value="default">Add</button>
+            </div>
         </form>
     </dialog>
 
+    <p>
+        <button id="addBook">Add Book</button>
+    </p>
 
-    <table id="table">
-        <tr>
-            <th colspan="2">My Library</th>
-        </tr>
-        <tr>
-            <td>Title</td>
-            <td id="table_title"></td>
-        </tr>
-        <tr>
-            <td>Author</td>
-            <td id="table_author"></td>
-        </tr>
-        <tr>
-            <td>Number of pages</td>
-            <td id="table_pages"></td>
-        </tr>
-        <tr>
-            <td>Type</td>
-            <td id="table_type"></td>
-        </tr>
-        <tr>
-            <td>The book has been read</td>
-            <td id="table_read"></td>
-        </tr>
-    </table>
+    <output></output>
+        <table id="table">
+            <tr>
+                <th colspan="2">My Library</th>
+            </tr>
+            <tr>
+                <td>Title</td>
+                <td id="table_title"></td>
+            </tr>
+            <tr>
+                <td>Author</td>
+                <td id="table_author"></td>
+            </tr>
+            <tr>
+                <td>Number of pages</td>
+                <td id="table_pages"></td>
+            </tr>
+            <tr>
+                <td>Type</td>
+                <td id="table_type"></td>
+            </tr>
+            <tr>
+                <td>The book has been read</td>
+                <td id="table_read"></td>
+            </tr>
+        </table>
+    </output>
     <script src="./assets/script.js"></script>
 </body>
 </html>

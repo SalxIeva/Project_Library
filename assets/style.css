@@ -10,10 +10,9 @@ html, body {
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    /* justify-content: center;
+    align-items: center; */
 }
 
 table, td {
