@@ -3,6 +3,12 @@
     --radius: 10px
 }
 
+.unlock-regular {
+    font-family: "Unlock", serif;
+    font-weight: 400;
+    font-style: normal;
+}  
+
 html, body {
     height: 100%;
     margin: 0;
@@ -20,10 +26,12 @@ body {
 }
 
 table, td {
-    border: 1px double black;
+    border: 1px double rgb(255, 255, 255);
     padding: var(--padding);
     border-radius: var(--radius);
     width: 40vh;
+    color: black;
+    background-color: rgba(183, 236, 235, 0.3);
 }
 
 body>p {
@@ -33,7 +41,9 @@ body>p {
 }
 
 #addBook {
-    width: 12vh;
-    height: 5vh;
+    width: 17vh;
+    height: 8vh;
     border-radius: var(--radius);
+    font-family: "Unlock", serif;
+    font-size: 20px;
 }
