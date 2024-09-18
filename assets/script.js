@@ -4,14 +4,20 @@
 const title = document.getElementById('title');
 const author = document.getElementById('author');
 const pages = document.getElementById('pages');
+const types = document.getElementById('type');
 const read = document.getElementById('read');
 
 const cancelBtn = document.getElementById('cancelBtn');
 const confirmBtn = document.getElementById('confirmBtn');
 const addBookBtn = document.getElementById('addBook');
+const removeBtn = document.getElementById('removeBtn');
+const readBtn = document.getElementById('readBtn')
 
 const output = document.getElementById('table');
 const tableTitle = document.getElementById('table_title');
+const tableAuthor = document.getElementById('table_author');
+const tablePages = document.getElementById('table_pages');
+const tableRead = document.getElementById('table_read');
 
 
 // All of your book objects are going to be stored in an array
