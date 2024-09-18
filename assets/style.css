@@ -5,7 +5,7 @@
 
 .unlock-regular {
     font-family: "Unlock", serif;
-    font-weight: 900;
+    font-weight: 600;
     font-style: normal;
 }  
 
@@ -64,6 +64,36 @@ th {
     font-size: 20px;
 }
 
+#btnRow {
+    background: none;
+    border: none;
+    text-align: right;
+}
+
+#removeBtn {
+    border-radius: var(--radius);
+    padding: var(--padding);
+    font-family: "Unlock", serif;
+}
+
+#removeBtn:hover,
+#addBook:hover {
+    background-color: antiquewhite;
+    color: rgb(9, 9, 56);
+}
+
+#removeBtn:active {
+    background-color: antiquewhite;
+    color: rgb(9, 9, 56);
+    box-shadow: 2px 2px 2px rgb(107, 107, 107);
+}
+
+#addBook:active {
+    background-color: antiquewhite;
+    color: rgb(9, 9, 56);
+    box-shadow: 5px 5px 5px rgb(42, 41, 41);
+}
+
 body>p {
     display: flex;
     justify-content: center;
@@ -77,3 +107,4 @@ body>p {
     font-family: "Unlock", serif;
     font-size: 20px;
 }
+
