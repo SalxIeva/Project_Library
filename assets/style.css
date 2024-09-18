@@ -12,6 +12,11 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
+    background-image: linear-gradient(
+    rgb(234, 90, 90),
+    rgb(33, 16, 41)
+  );
+  opacity: 0.75;
 }
 
 table, td {
@@ -27,6 +32,8 @@ body>p {
     padding: 5vh 0 10vh 0;
 }
 
-/* #addBook {
-
-} */
+#addBook {
+    width: 12vh;
+    height: 5vh;
+    border-radius: var(--radius);
+}
