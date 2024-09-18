@@ -29,11 +29,16 @@ addBookBtn.addEventListener('click', () => {
 confirmBtn.addEventListener('click', () => {
     e.preventDefault();
     dialog.close();
-})
+});
 
 cancelBtn.addEventListener('click', () => {
     dialog.close();
-})
+});
+
+removeBtn.addEventListener('click', () => {
+    output.remove();
+});
+
 // All of your book objects are going to be stored in an array
 const myLibrary = [];
 
