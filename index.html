@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
+    <dialog id="dialog">
+        <form method="dialog" id="form">
+            <p>
+                <label for="title">
+                    <input type="text" id="title" required />
+                </label>
+            </p>
+        </form>
+    </dialog>
+
+
     <table id="table">
         <tr>
             <th colspan="2">My Library</th>
@@ -29,7 +40,7 @@
         </tr>
         <tr>
             <td>The book has been read</td>
-            <td id="table_read">no</td>
+            <td id="table_read"></td>
         </tr>
     </table>
     <script src="./assets/script.js"></script>
