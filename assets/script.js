@@ -1,6 +1,8 @@
 // console.log("Hello World!")
 
 // get all the needed elements by their ids
+const dialog = document.getElementById('dialog')
+
 const title = document.getElementById('title');
 const author = document.getElementById('author');
 const pages = document.getElementById('pages');
@@ -8,6 +10,7 @@ const types = document.getElementById('type');
 const read = document.getElementById('read');
 
 const cancelBtn = document.getElementById('cancelBtn');
+
 const confirmBtn = document.getElementById('confirmBtn');
 const addBookBtn = document.getElementById('addBook');
 const removeBtn = document.getElementById('removeBtn');
@@ -19,7 +22,14 @@ const tableAuthor = document.getElementById('table_author');
 const tablePages = document.getElementById('table_pages');
 const tableRead = document.getElementById('table_read');
 
+addBookBtn.addEventListener('click', () => {
+    dialog.showModal();
+});
 
+confirmBtn.addEventListener('click', () => {
+    e.preventDefault();
+    dialog.close();
+})
 // All of your book objects are going to be stored in an array
 const myLibrary = [];
 
