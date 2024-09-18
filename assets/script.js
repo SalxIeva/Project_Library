@@ -39,6 +39,14 @@ removeBtn.addEventListener('click', () => {
     output.remove();
 });
 
+readBtn.addEventListener('click', () => {
+    if(readBtn.textContent === 'Read') {
+        readBtn.textContent = 'Unread';
+    } else {
+        readBtn.textContent = 'Read';
+    }
+    
+})
 // All of your book objects are going to be stored in an array
 const myLibrary = [];
 

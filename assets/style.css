@@ -53,6 +53,7 @@ table {
     background-color: rgb(252, 252, 252);
     color: black;
     margin: 2vh;
+    table-layout: fixed;
 }
 
 td {
