@@ -18,13 +18,15 @@ table, td {
     border: 1px double black;
     padding: var(--padding);
     border-radius: var(--radius);
+    width: 40vh;
 }
-
 
 body>p {
     display: flex;
     justify-content: center;
+    padding: 5vh 0 10vh 0;
 }
+
 /* #addBook {
 
 } */
