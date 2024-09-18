@@ -1,6 +1,7 @@
 * {
     --padding: 1vh;
-    --radius: 10px
+    --radius: 10px;
+    --font: white;
 }
 
 .unlock-regular {
@@ -109,3 +110,17 @@ body>p {
     font-size: 20px;
 }
 
+button {
+    cursor: pointer;
+}
+
+#readBtn {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: var(--font);
+    padding: 0;
+    margin: 0;
+}
