@@ -10,9 +10,8 @@ html, body {
 }
 
 body {
-    display: grid;
-    /* justify-content: center;
-    align-items: center; */
+    display: flex;
+    flex-direction: column;
 }
 
 table, td {
@@ -21,8 +20,11 @@ table, td {
     border-radius: var(--radius);
 }
 
-/* td {
-    border: 1px solid black;
-    padding: var(--padding);
-    bor
+
+body>p {
+    display: flex;
+    justify-content: center;
+}
+/* #addBook {
+
 } */

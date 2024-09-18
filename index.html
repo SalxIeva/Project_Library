@@ -10,31 +10,28 @@
     <dialog id="dialog">
         <form method="dialog" id="form">
             <p>
-                <label for="title">
-                    <input type="text" id="title" required />
-                </label>
+                <label for="title"></label>
+                <input type="text" id="title" required />
             </p>
             <p>
-                <label for="author">
-                    <input type="text" id="author" required>
-                </label>
+                <label for="author"></label>
+                <input type="text" id="author" required>
             </p>
             <p>
-                <label for="pages">
-                    <input type="number" id="pages" required>
-                </label>
+                <label for="pages"></label>
+                <input type="number" id="pages" required>
             </p>
             <p>
                 <label for="read">
-                    <select>
-                        <option value="default" id="read">Read</option>
-                        <option id="unread">Unread</option>
+                    <select id="read">
+                        <option value="read">Read</option>
+                        <option value="unread">Unread</option>
                     </select>
                 </label>
             </p>
             <div>
-                <button value="cancel" formmethod="dialog">Cancel</button>
-                <button id="confirmBtn" value="default">Add</button>
+                <button type="button" id="cancelBtn">Cancel</button>
+                <button type="submit" id="confirmBtn">Add</button>
             </div>
         </form>
     </dialog>
@@ -43,7 +40,6 @@
         <button id="addBook">Add Book</button>
     </p>
 
-    <output></output>
         <table id="table">
             <tr>
                 <th colspan="2">My Library</th>
@@ -69,7 +65,6 @@
                 <td id="table_read"></td>
             </tr>
         </table>
-    </output>
     <script src="./assets/script.js"></script>
 </body>
 </html>
