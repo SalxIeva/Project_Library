@@ -74,7 +74,8 @@ function addBookToLibrary() {
 
     const newBook = new Book(titleVal, authorVal, typeVal, pagesVal, readVal);
 
-    
+    myLibrary.push(newBook);
+    console.log(myLibrary);
 }
 
 
