@@ -13,8 +13,6 @@ const cancelBtn = document.getElementById('cancelBtn');
 
 const confirmBtn = document.getElementById('confirmBtn');
 const addBookBtn = document.getElementsByClassName('addBook');
-const removeBtn = document.getElementById('removeBtn');
-const readBtn = document.getElementsByClassName('readBtn')
 
 const output = document.getElementById('table');
 const tableTitle = document.getElementById('table_title');
@@ -128,6 +126,7 @@ cancelBtn.addEventListener('click', () => {
             
             
             function addReadBookBtnClick() {
+                const addBookBtn = document.querySelectorAll('.readBtn');
                 addBookBtn.forEach(button => {
                     button.addEventListener('click', () => {
                         const index = button.getAttribute('data-index');
@@ -149,6 +148,7 @@ cancelBtn.addEventListener('click', () => {
             //     output.remove();
             // });
             function removeBookBtnCLick() {
+                const removeBtn = document.querySelectorAll('.removeBtn');
                 removeBtn.forEach(button => {
                     button.addEventListener('click', () => {
                         const index = button.getAttribute('data-index');
