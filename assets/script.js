@@ -92,7 +92,35 @@ function addBookToLibrary() {
 // Write a function that loops through the array and displays each book on the page. 
 
 function displayBooks() {
-    
+    output.innerHTML = '';
+
+    myLibrary.forEach((book, index) =>{
+        const newRow = `
+        <tr>
+        <th colspan="2">${book.title}</th>
+      </tr>
+      <tr>
+        <td>Author</td>
+        <td>${book.author}</td>
+      </tr>
+      <tr>
+        <td>Type</td>
+        <td>${book.type}</td>
+      </tr>
+      <tr>
+        <td>Number of pages</td>
+        <td>${book.pages}</td>
+      </tr>
+      <tr>
+        <td>The book has been read</td>
+        <td><button class="readBtn" data-index="${index}">${book.read}</button></td>
+      </tr>
+      <tr>
+        <td colspan="2"><button class="removeBtn" data-index="${index}">Remove</button></td>
+      </tr>`;
+
+      output.innerHTML += newRow;
+    })
 }
 
 // Add a “NEW BOOK” button that brings up a form allowing users to input the details for the new book: author, title, number of pages, whether it’s been read and anything else you might want. 
