@@ -71,6 +71,10 @@ function addBookToLibrary() {
     const typeVal = type.value;
     const pagesVal = pages.value;
     const readVal = read.value;
+
+    const newBook = new Book(titleVal, authorVal, typeVal, pagesVal, readVal);
+
+    
 }
 
 
