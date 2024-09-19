@@ -6,7 +6,7 @@ const dialog = document.getElementById('dialog')
 const title = document.getElementById('title');
 const author = document.getElementById('author');
 const pages = document.getElementById('pages');
-const types = document.getElementById('type');
+const type = document.getElementById('type');
 const read = document.getElementById('read');
 
 const cancelBtn = document.getElementById('cancelBtn');
@@ -19,6 +19,7 @@ const readBtn = document.getElementById('readBtn')
 const output = document.getElementById('table');
 const tableTitle = document.getElementById('table_title');
 const tableAuthor = document.getElementById('table_author');
+const tableType = document.getElementById('table_type');
 const tablePages = document.getElementById('table_pages');
 const tableRead = document.getElementById('table_read');
 
@@ -30,6 +31,13 @@ confirmBtn.addEventListener('click', () => {
     e.preventDefault();
 
     addBookToLibrary();
+
+    tableTitle.textContent = title.value;
+    tableAuthor.textContent = author.value;
+    tableType.textContent = type.value;
+    tablePages.textContent = pages.value;
+    tableRead.textContent = read.value;
+    
     dialog.close();
 });
 
