@@ -60,9 +60,17 @@ function Book(title, author, type, pages, read) {
   this.read = read;
 }
 
+// let newBook = new Book('blye', 'ghfh', 'hjfhd', '565', 'read');
+// console.log(newBook);
+
 // add a function that can take user’s input and store the new book objects into an array.
 function addBookToLibrary() {
   // do stuff here
+    const titleVal = title.value;
+    const authorVal = author.value;
+    const typeVal = type.value;
+    const pagesVal = pages.value;
+    const readVal = read.value;
 }
 
 
