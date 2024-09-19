@@ -28,7 +28,7 @@ addBookBtn.addEventListener('click', () => {
 });
 
 confirmBtn.addEventListener('click', () => {
-    e.preventDefault();
+    event.preventDefault();
 
     addBookToLibrary();
 
@@ -36,8 +36,8 @@ confirmBtn.addEventListener('click', () => {
     tableAuthor.textContent = author.value;
     tableType.textContent = type.value;
     tablePages.textContent = pages.value;
-    tableRead.textContent = read.value;
-    
+    tableRead.textContent = read.value === 'read' ? 'Read' : 'Unread';
+
     dialog.close();
 });
 
@@ -90,6 +90,11 @@ function addBookToLibrary() {
 
 
 // Write a function that loops through the array and displays each book on the page. 
+
+function displayBooks() {
+    
+}
+
 // Add a “NEW BOOK” button that brings up a form allowing users to input the details for the new book: author, title, number of pages, whether it’s been read and anything else you might want. 
 // Add a button on each book’s display to remove the book from the library.
 
