@@ -116,7 +116,9 @@ cancelBtn.addEventListener('click', () => {
                     </tr>`;
                     
                     output.appendChild(newRow);
-                })
+                });
+                addReadBookBtnClick();
+                removeBookBtnCLick();
             }
             
             // Add a “NEW BOOK” button that brings up a form allowing users to input the details for the new book: author, title, number of pages, whether it’s been read and anything else you might want. 
