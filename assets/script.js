@@ -28,6 +28,8 @@ addBookBtn.addEventListener('click', () => {
 
 confirmBtn.addEventListener('click', () => {
     e.preventDefault();
+
+    addBookToLibrary();
     dialog.close();
 });
 
