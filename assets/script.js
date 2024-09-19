@@ -42,9 +42,6 @@ cancelBtn.addEventListener('click', () => {
     dialog.close();
 });
 
-removeBtn.addEventListener('click', () => {
-    output.remove();
-});
 
 // readBtn.addEventListener('click', () => {
     //     if(readBtn.textContent === 'Read') {
@@ -145,6 +142,19 @@ removeBtn.addEventListener('click', () => {
             }
             
             // Add a button on each book’s display to remove the book from the library.
+
+            // removeBtn.addEventListener('click', () => {
+            //     output.remove();
+            // });
+            function removeBookBtnCLick() {
+                removeBtn.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const index = button.getAttribute('data-index');
+                        myLibrary.splice(index, 1);
+                        displayBooks();
+                    });
+                });
+            }
             
             // Add a button on each book’s display to change its read status. 
             // Create the function that toggles a book’s read status on your Book prototype instance.
