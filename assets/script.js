@@ -113,13 +113,7 @@ function addReadBookBtnClick() {
     addBookBtn.forEach(button => {
         button.addEventListener('click', () => {
             const index = button.getAttribute('data-index');
-            // myLibrary[index].read = myLibrary[index].read === 'read' ? 'unread' : 'read';
-            
-            if(myLibrary[index].read.textContent === 'Read') {
-                myLibrary[index].read.textContent = 'Unread';
-            } else {
-                myLibrary[index].read.textContent = 'Read';
-            }
+            myLibrary[index].read = myLibrary[index].read === 'read' ? 'unread' : 'read';
             displayBooks();
         })
     })
