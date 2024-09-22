@@ -54,6 +54,9 @@ table {
     color: black;
     margin: 2vh;
     table-layout: fixed;
+    display: grid;
+    /* flex-flow: row wrap;
+    flex-direction: row; */
 }
 
 td {

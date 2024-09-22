@@ -37,7 +37,7 @@ function Book(title, author, type, pages, read) {
             
 // add a function that can take user’s input and store the new book objects into an array.
 function addBookToLibrary() {
-    
+
     // do stuff here
     const newBook = new Book(title.value, author.value, type.value, pages.value, read.value);
     
@@ -87,6 +87,10 @@ function displayBooks() {
 
 addBookBtn.addEventListener('click', () => {
     dialog.showModal();
+    title.value = '';
+    author.value = '';
+    type.value = '';
+    pages.value = '';
 });
 
 confirmBtn.addEventListener('click', () => {
