@@ -2,6 +2,7 @@
 
 // get all the needed elements by their ids
 const dialog = document.getElementById('dialog')
+const form = document.getElementById('form');
 
 const title = document.getElementById('title');
 const author = document.getElementById('author');
@@ -87,26 +88,25 @@ function displayBooks() {
 
 addBookBtn.addEventListener('click', () => {
     dialog.showModal();
-    title.value = '';
-    author.value = '';
-    type.value = '';
-    pages.value = '';
+    form.reset();
 
 });
 
 confirmBtn.addEventListener('click', () => {
     event.preventDefault();
     
-    addBookToLibrary();
+
+    if (form.checkValidity()) {
+        // if the form is valid, add the book
+        addBookToLibrary();
+        dialog.close(); 
+        output.style.display = 'block';
+    } else {
+        // if the form is invalid, report the issues
+        form.reportValidity();
+    }
     
-    dialog.close();
-    
-    title.value = '';
-    author.value = '';
-    type.value = '';
-    pages.value = '';
-    
-    output.style.display = 'block';
+
 });
 
 cancelBtn.addEventListener('click', () => {
@@ -146,3 +146,5 @@ function removeBookBtnCLick() {
 
 // Add a button on each book’s display to change its read status. 
 // Create the function that toggles a book’s read status on your Book prototype instance.
+
+
