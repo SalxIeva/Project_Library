@@ -42,33 +42,7 @@ body {
   opacity: 0.75;
 }
 
-table, td {
-    border: 1px double rgb(0, 0, 0);
-    padding: var(--padding);
-    border-radius: var(--radius);
-    width: 50vh;
-    font-family: "Josefin Sans", sans-serif;
-}
 
-table {
-    background-color: rgb(252, 252, 252);
-    color: black;
-    margin: 2vh;
-    table-layout: fixed;
-    display: none;
-
-}
-
-td {
-    background-color: rgba(77, 21, 11, 0.8);  
-    color: white;
-}
-
-th {
-    font-family: "Italianno", cursive;
-    padding: 1vh;
-    font-size: 20px;
-}
 
 #btnRow {
     background: none;
@@ -118,6 +92,11 @@ button {
     cursor: pointer;
 }
 
+#dialog {
+    border-radius: var(--radius);
+    background-color: antiquewhite;
+}
+
 .readBtn {
     width: 100%;
     height: 100%;
@@ -132,11 +111,34 @@ button {
 .booksContainer {
     display: grid;
     gap: 20px;
-    /* justify-content: flex-start;
-    flex-direction: row; */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
-#dialog {
+table, td {
+    border: 1px double rgb(0, 0, 0);
+    padding: var(--padding);
     border-radius: var(--radius);
-    background-color: antiquewhite;
+    width: 50vh;
+    font-family: "Josefin Sans", sans-serif;
 }
+    
+table {
+    background-color: rgb(252, 252, 252);
+    color: black;
+    margin: 2vh;
+    table-layout: fixed;
+    display: none;
+
+}
+
+td {
+    background-color: rgba(77, 21, 11, 0.8);  
+    color: white;
+}
+
+th {
+    font-family: "Italianno", cursive;
+    padding: 1vh;
+    font-size: 20px;
+}
+

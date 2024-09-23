@@ -51,12 +51,15 @@ function addBookToLibrary() {
 
 // Write a function that loops through the array and displays each book on the page. 
 
-const output = document.getElementById('table');
+const output = document.getElementById('booksContainer');
 function displayBooks() {
     output.innerHTML = '';
 
+
     myLibrary.forEach((book, index) =>{
-        const newRow = `
+        const newTable = document.createElement('table');
+
+        const newTableContent = `
         <tr>
         <th colspan="2">${book.title}</th>
         </tr>
@@ -80,7 +83,12 @@ function displayBooks() {
         <td colspan="2"><button class="removeBtn" data-index="${index}">Remove</button></td>
         </tr>`;
         
-        output.innerHTML += newRow;
+        // output.innerHTML += newRow;
+
+        newTable.innerHTML = newTableContent; 
+        newTable.style.display = 'block'; 
+
+        output.appendChild(newTable);
     });
     addReadBookBtnClick();
     removeBookBtnCLick();
