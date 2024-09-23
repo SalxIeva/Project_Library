@@ -20,10 +20,16 @@ Project Library is part of the Odin Project assignments for Objects and its prot
 5. You will be able to change read/unread status inside the books table.
 6. By pressing 'Remove' button, you can remove the book from your list.
 
-## License 
+## Live Preview
 
-MIT
+You can check it out live here:
+https://salxieva.github.io/Project_Library/
 
 ## Screenshot
 
 ![image](https://github.com/user-attachments/assets/ba9e06bf-32ca-4f41-8f71-ddd6aca39093)
+
+## License 
+
+MIT
+
