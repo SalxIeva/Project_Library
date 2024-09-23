@@ -14,7 +14,7 @@ const cancelBtn = document.getElementById('cancelBtn');
 const confirmBtn = document.getElementById('confirmBtn');
 const addBookBtn = document.getElementById('addBook');
 
-const output = document.getElementById('table');
+// const output = document.getElementById('table');
 const tableTitle = document.getElementById('table_title');
 const tableAuthor = document.getElementById('table_author');
 const tableType = document.getElementById('table_type');
@@ -50,10 +50,10 @@ function addBookToLibrary() {
 
 // Write a function that loops through the array and displays each book on the page. 
 
+const output = document.getElementById('table');
 function displayBooks() {
-    if (output.innerHTML !== '') {
     output.innerHTML = '';
-    }
+
     myLibrary.forEach((book, index) =>{
         const newRow = `
         <tr>
@@ -91,6 +91,7 @@ addBookBtn.addEventListener('click', () => {
     author.value = '';
     type.value = '';
     pages.value = '';
+
 });
 
 confirmBtn.addEventListener('click', () => {
@@ -99,6 +100,13 @@ confirmBtn.addEventListener('click', () => {
     addBookToLibrary();
     
     dialog.close();
+    
+    title.value = '';
+    author.value = '';
+    type.value = '';
+    pages.value = '';
+    
+    output.style.display = 'block';
 });
 
 cancelBtn.addEventListener('click', () => {
@@ -130,6 +138,10 @@ function removeBookBtnCLick() {
             displayBooks();
         });
     });
+
+    if ( output.innerHTML === '') {
+    output.style.display = 'none'
+    }
 }
 
 // Add a button on each book’s display to change its read status. 

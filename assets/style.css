@@ -54,9 +54,8 @@ table {
     color: black;
     margin: 2vh;
     table-layout: fixed;
-    display: grid;
-    /* flex-flow: row wrap;
-    flex-direction: row; */
+    display: none;
+
 }
 
 td {
@@ -127,4 +126,11 @@ button {
     color: var(--font);
     padding: 0;
     margin: 0;
+}
+
+.booksContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
 }
