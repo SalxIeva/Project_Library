@@ -34,6 +34,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
+    max-height: 100vw;
     background-image: linear-gradient(
     rgb(234, 90, 90),
     rgb(33, 16, 41)
@@ -41,31 +42,7 @@ body {
   opacity: 0.75;
 }
 
-table, td {
-    border: 1px double rgb(0, 0, 0);
-    padding: var(--padding);
-    border-radius: var(--radius);
-    width: 50vh;
-    font-family: "Josefin Sans", sans-serif;
-}
 
-table {
-    background-color: rgb(252, 252, 252);
-    color: black;
-    margin: 2vh;
-    table-layout: fixed;
-}
-
-td {
-    background-color: rgba(77, 21, 11, 0.8);  
-    color: white;
-}
-
-th {
-    font-family: "Italianno", cursive;
-    padding: 1vh;
-    font-size: 20px;
-}
 
 #btnRow {
     background: none;
@@ -73,19 +50,19 @@ th {
     text-align: right;
 }
 
-#removeBtn {
+.removeBtn {
     border-radius: var(--radius);
     padding: var(--padding);
     font-family: "Unlock", serif;
 }
 
-#removeBtn:hover,
+.removeBtn:hover,
 #addBook:hover {
     background-color: antiquewhite;
     color: rgb(9, 9, 56);
 }
 
-#removeBtn:active {
+.removeBtn:active {
     background-color: antiquewhite;
     color: rgb(9, 9, 56);
     box-shadow: 2px 2px 2px rgb(107, 107, 107);
@@ -115,7 +92,12 @@ button {
     cursor: pointer;
 }
 
-#readBtn {
+#dialog {
+    border-radius: var(--radius);
+    background-color: antiquewhite;
+}
+
+.readBtn {
     width: 100%;
     height: 100%;
     background: transparent;
@@ -125,3 +107,38 @@ button {
     padding: 0;
     margin: 0;
 }
+
+#booksContainer {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+table, td {
+    border: 1px double rgb(0, 0, 0);
+    padding: var(--padding);
+    border-radius: var(--radius);
+    width: 50vh;
+    font-family: "Josefin Sans", sans-serif;
+}
+    
+table {
+    background-color: rgb(252, 252, 252);
+    color: black;
+    margin: 2vh;
+    table-layout: fixed;
+    display: none;
+
+}
+
+td {
+    background-color: rgba(77, 21, 11, 0.8);  
+    color: white;
+}
+
+th {
+    font-family: "Italianno", cursive;
+    padding: 1vh;
+    font-size: 20px;
+}
+
