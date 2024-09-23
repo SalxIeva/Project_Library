@@ -108,7 +108,7 @@ confirmBtn.addEventListener('click', () => {
         // if the form is valid, add the book
         addBookToLibrary();
         dialog.close(); 
-        output.style.display = 'block';
+        output.style.display = 'grid';
     } else {
         // if the form is invalid, report the issues
         form.reportValidity();
