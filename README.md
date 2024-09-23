@@ -2,7 +2,7 @@
 
 ## Description
 
-Project Library is part of the Odin Project assignments. 
+Project Library is part of the Odin Project assignments for Objects and its prototypes section. 
 
 -Here you can add any of your favorite book and details about it.
 
@@ -16,3 +16,10 @@ Project Library is part of the Odin Project assignments.
 2. Enter books details:
 'Title', 'Author', 'Type', 'Pages'.
 3. Select one of the 2 options: 'Read' or 'Unread' (you can also change that later on).
+4. Press 'Add' once you are done, unless you do not wish to continue, then press 'Cancel'.
+5. You will be able to change read/unread status inside the books table.
+6. By pressing 'Remove' button, you can remove the book from your list.
+
+## License 
+
+MIT
