@@ -53,6 +53,8 @@ class Book {
 // add a function that can take user’s input and store the new book objects into an array.
 function addBookToLibrary() {
 
+    const readStatus = read.value;
+
     // do stuff here
     const newBook = new Book(
         title.value, 
@@ -148,7 +150,8 @@ function addReadBookBtnClick() {
     addBookBtn.forEach(button => {
         button.addEventListener('click', () => {
             const index = button.getAttribute('data-index');
-            myLibrary[index].read = myLibrary[index].toggleReadStatus();
+            // myLibrary[index].read = myLibrary[index].toggleReadStatus();
+            myLibrary[index].toggleReadStatus();
             displayBooks();
         })
     })
