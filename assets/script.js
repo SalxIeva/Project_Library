@@ -27,20 +27,41 @@ const tableRead = document.getElementById('table_read');
 // All of your book objects are going to be stored in an array
 const myLibrary = [];
 
-function Book(title, author, type, pages, read) {
-    // the constructor...
-    this.title = title;
-    this.author = author;
-    this.type = type;
-    this.pages = pages;
-    this.read = read;
+// function Book(title, author, type, pages, read) {
+//     // the constructor...
+//     this.title = title;
+//     this.author = author;
+//     this.type = type;
+//     this.pages = pages;
+//     this.read = read;
+// }
+
+class Book {
+    constructor(title, author, type, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.type = type;
+        this.pages = pages;
+        this.read = read;
+    }
+
+    toggleReadStatus() {
+        this.read = this.read === "read" ? "unread" : "read";
+    }
 }
             
 // add a function that can take user’s input and store the new book objects into an array.
 function addBookToLibrary() {
 
+    const readStatus = read.value;
+
     // do stuff here
-    const newBook = new Book(title.value, author.value, type.value, pages.value, read.value);
+    const newBook = new Book(
+        title.value, 
+        author.value, 
+        type.value, 
+        pages.value, 
+        read.value);
     
     myLibrary.push(newBook);
     
@@ -129,7 +150,8 @@ function addReadBookBtnClick() {
     addBookBtn.forEach(button => {
         button.addEventListener('click', () => {
             const index = button.getAttribute('data-index');
-            myLibrary[index].read = myLibrary[index].read === 'read' ? 'unread' : 'read';
+            // myLibrary[index].read = myLibrary[index].toggleReadStatus();
+            myLibrary[index].toggleReadStatus();
             displayBooks();
         })
     })
