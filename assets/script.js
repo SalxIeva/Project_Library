@@ -44,6 +44,10 @@ class Book {
         this.pages = pages;
         this.read = read;
     }
+
+    toggleReadStatus() {
+        this.read = this.read === "read" ? "unread" : "read";
+    }
 }
             
 // add a function that can take user’s input and store the new book objects into an array.
