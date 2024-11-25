@@ -27,13 +27,23 @@ const tableRead = document.getElementById('table_read');
 // All of your book objects are going to be stored in an array
 const myLibrary = [];
 
-function Book(title, author, type, pages, read) {
-    // the constructor...
-    this.title = title;
-    this.author = author;
-    this.type = type;
-    this.pages = pages;
-    this.read = read;
+// function Book(title, author, type, pages, read) {
+//     // the constructor...
+//     this.title = title;
+//     this.author = author;
+//     this.type = type;
+//     this.pages = pages;
+//     this.read = read;
+// }
+
+class Book {
+    constructor(title, author, type, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.type = type;
+        this.pages = pages;
+        this.read = read;
+    }
 }
             
 // add a function that can take user’s input and store the new book objects into an array.
