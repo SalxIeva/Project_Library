@@ -54,7 +54,12 @@ class Book {
 function addBookToLibrary() {
 
     // do stuff here
-    const newBook = new Book(title.value, author.value, type.value, pages.value, read.value);
+    const newBook = new Book(
+        title.value, 
+        author.value, 
+        type.value, 
+        pages.value, 
+        read.value);
     
     myLibrary.push(newBook);
     
@@ -143,7 +148,7 @@ function addReadBookBtnClick() {
     addBookBtn.forEach(button => {
         button.addEventListener('click', () => {
             const index = button.getAttribute('data-index');
-            myLibrary[index].read = myLibrary[index].read === 'read' ? 'unread' : 'read';
+            myLibrary[index].read = myLibrary[index].toggleReadStatus();
             displayBooks();
         })
     })
